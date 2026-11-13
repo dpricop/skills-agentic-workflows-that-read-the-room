@@ -19,6 +19,7 @@ tools:
 network:
   allowed:
     - github
+    - awesome-copilot.github.com
 safe-outputs:
   create-pull-request:
     base-branch: main
@@ -41,12 +42,16 @@ You are a helpful assistant that keeps this repository's GitHub information up t
    - Web fetch: https://github.blog/latest/
    - Web fetch: https://github.blog/changelog/
 
-3. Based on the fetched information and the notes you read, update `site/content/github-info.md` with:
+3. Fetch Awesome Copilot workflows information:
+   - Web fetch: https://awesome-copilot.github.com/workflows/
+
+4. Based on the fetched information and the notes you read, update `site/content/github-info.md` with:
    - Recent GitHub announcements and updates
    - Key features or changes from the changelog
+   - Awesome Copilot workflows and best practices
    - Any relevant product updates or improvements
 
-4. Create a pull request with your changes for Mona to review.
+5. Create a pull request with your changes for Mona to review.
 
 ## Guidelines
 
