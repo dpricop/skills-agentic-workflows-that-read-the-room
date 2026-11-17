@@ -83,6 +83,7 @@ The workflow uses `safe-outputs: create-pull-request`, so the agent can draft we
 <summary>Having trouble? 🤷</summary><br/>
 
 - If the workflow fails before the agent starts, confirm `COPILOT_GITHUB_TOKEN` is configured as an Actions secret.
+- If the agent log reports a `401` while fetching the model catalog, check that `COPILOT_GITHUB_TOKEN` is valid and belongs to an account with Copilot access. Replace it with a fine-grained token with **Copilot Requests: Read** if needed; see Step 1.
 - If compilation fails, make sure `.github/workflows/update-github-info.md` includes `safe-outputs`, `create-pull-request`, `workflow_dispatch`, and a `network` allowlist for the GitHub Blog and Awesome Copilot sources.
 - If no pull request appears, open the failed workflow run from the **Actions** tab and review the logs.
 - If the pull request opens as a draft, that is expected. Mona should review generated website changes before they merge.
